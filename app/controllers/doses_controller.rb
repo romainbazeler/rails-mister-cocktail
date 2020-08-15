@@ -21,7 +21,7 @@ class DosesController < ApplicationController
   private
  #cannot save without strong parmas
   def dose_params
-    params.require(:dose).permit(:description)
+    params.require(:dose).permit(:description, :ingredient_id)
   end
 
 end
