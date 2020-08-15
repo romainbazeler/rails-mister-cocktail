@@ -8,7 +8,7 @@ class CocktailsController < ApplicationController
   # GET "cocktails/42"
   def show
     @cocktail = Cocktail.find(params[:id])
-    # @review = Review.new
+    @dose = Dose.new
   end
 
   def new

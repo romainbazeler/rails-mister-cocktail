@@ -2,5 +2,8 @@
 
 <%= simple_form_for [ @cocktail, @dose ] do |f| %>
   <%= f.input :description %>
+<%= f.association :ingredient, as: :radio_buttons %>
+<%# <%= f.association :ingredients, collection: Company.active.order(:name), prompt: "Choose a Company" %> %>
   <%= f.submit "Submit", class: "btn btn-primary" %>
 <% end %>
+
