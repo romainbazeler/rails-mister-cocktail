@@ -1,9 +1,9 @@
  <h1>Cocktail dose</h1>
 
-<%= simple_form_for [ @cocktail, @dose ] do |f| %>
+<h3>Add a new dose</h3>
+<%= simple_form_for [@cocktail, @dose] do |f| %>
+  <%= f.association :ingredient, input_html: { class: "beautiful-dropdown" }, include_hidden: false %>
   <%= f.input :description %>
-<%= f.association :ingredient, as: :radio_buttons %>
-<%# <%= f.association :ingredients, collection: Company.active.order(:name), prompt: "Choose a Company" %> %>
-  <%= f.submit "Submit", class: "btn btn-primary" %>
+  <%= f.button :submit, class: "btn btn-primary" %>
 <% end %>
 
